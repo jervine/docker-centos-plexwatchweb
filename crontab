@@ -1,0 +1,2 @@
+* * * * * /opt/plexWatch/plexWatch.pl
+*/15 * * * * /opt/plexWatch/plexWatch.pl --recently_added=movie,tv
