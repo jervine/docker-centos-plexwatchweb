@@ -21,6 +21,6 @@ RUN chmod 755 /sbin/start.sh
 
 VOLUME /opt/plexWatch
 
-EXPOSE 80
+EXPOSE 80 9003
 
 ENTRYPOINT ["/sbin/start.sh"]
