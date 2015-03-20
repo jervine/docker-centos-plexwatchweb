@@ -10,7 +10,7 @@ RUN yum update -y; yum clean all
 RUN yum install -y install perl\(LWP::UserAgent\) perl\(XML::Simple\) perl\(Pod::Usage\) perl\(JSON\) perl\(DBI\) perl\(Time::Duration\) perl\(Time::ParseDate\) perl\(DBD::SQLite\) httpd php unzip cronie supervisor php-pdo
 
 RUN curl -L https://github.com/ecleese/plexWatchWeb/archive/master.zip -o /var/www/html/plexwatchweb.zip
-RUN cd /var/www/html; unzip plexwatchweb.zip; rm -f plexwatchweb.zip; mv plexWatchWeb-master plexWatch; ln -s plexWatch pw
+RUN cd /var/www/html; unzip plexwatchweb.zip; rm -f plexwatchweb.zip; mv plexWatchWeb-master plexWatch; chown -R apache:apache /var/www/html/plexWatch; ln -s plexWatch pw
 
 ADD crontab /var/spool/cron/root
 ADD start.sh /sbin/start.sh
