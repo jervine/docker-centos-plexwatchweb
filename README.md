@@ -1,5 +1,7 @@
 # docker-centos-plexwatchweb
-## CentOS 7 with plexWatchWeb installed
+## plexWatchWeb running on CentOS 7.4
+### Build Number: 2
+Date of Build: 15th September 2017
 
 CentOS 7 container with Apache2, cron, plexWatch and plexWatchWeb installed. The EPEL repository is added for some perl requirements and the supervisor daemon.
 
