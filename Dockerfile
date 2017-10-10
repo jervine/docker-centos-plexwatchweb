@@ -7,7 +7,7 @@ ENV container docker
 # Install updates, and install plexWatchWeb
 RUN yum install -y http://mirror.pnl.gov/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
 RUN yum update -y; yum clean all
-RUN yum install -y install perl\(LWP::UserAgent\) perl-LWP-Protocol-https perl\(XML::Simple\) perl\(Pod::Usage\) perl\(JSON\) perl\(DBI\) perl\(Time::Duration\) perl\(Time::ParseDate\) perl\(DBD::SQLite\) httpd php unzip cronie supervisor php-pdo
+RUN yum install -y install perl\(LWP::UserAgent\) perl-LWP-Protocol-https perl\(XML::Simple\) perl\(Pod::Usage\) perl\(JSON\) perl\(DBI\) perl\(Time::Duration\) perl\(Time::ParseDate\) perl\(DBD::SQLite\) httpd php unzip cronie supervisor php-pdo logrotate
 
 RUN curl -L https://github.com/ecleese/plexWatchWeb/archive/master.zip -o /var/www/html/plexwatchweb.zip
 RUN cd /var/www/html; unzip plexwatchweb.zip; rm -f plexwatchweb.zip; mv plexWatchWeb-master plexWatch; chown -R apache:apache /var/www/html/plexWatch; ln -s plexWatch pw
